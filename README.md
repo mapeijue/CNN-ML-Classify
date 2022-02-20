@@ -31,6 +31,11 @@ GTX1650，整个`inception_v3_svm_train.py`文件运行时间233.41s，整个`in
 ## 使用说明
 
 1. 下载完代码后，首先直接在此目录下解压`caltech_101_images.zip`，然后将图像放入`./caltech_101_images/train`文件夹中，同时和train同一级目录创建test目录。
+* 最终文件结构：
+* |
+* |-- caltech_101_images
+* |   |-- train **解压放置的目录**
+* |   |-- test
 2. 可以直接使用`datasetSegmentation.py`脚本进行数据分割，脚本默认是30%测试数据，脚本会将分割好的测试数据集从`train`目录搬运到`test`目录中。
 3. 之后可以使用`inception_v3_svm_train.py`脚本进行训练，脚本会将训练好的模型放到`model`目录中，同时在训练中也会进行test的测试，这个测试是和`inception_v3_svm_test.py`
    这个脚本测试结果相同，`inception_v3_svm_test.py`这个脚本测试是需要`inception_v3_svm_train.py`训练完的模型。
